@@ -14,7 +14,7 @@ react-active lets you handle open / closed states better in your app. It passes 
 <Active>
   {(active, setActive) => (
     active ?
-      <div>
+      <div onClick={() => setActive(true)}>
         Show this! It will hide on global window clicks.
         <div onClick={() => setActive(false)}>
           Hide this
@@ -25,6 +25,13 @@ react-active lets you handle open / closed states better in your app. It passes 
   )}
 </Active>
 ```
+
+###API
+
+- `active`: defaults to false
+- `setActive`: accepts `true` or `false`
+
+Clicking outside of the children will make `active` become false. May change to make clicking the children toggle active without you having to in the children.
 
 ###Todo
 
