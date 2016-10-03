@@ -11,7 +11,7 @@ react-active lets you handle open / closed states better in your app. It passes 
 ###Usage
 
 ```js
-<Active>
+<Active className="container" activeClassName="active">
   {(active, setActive) => (
     active ?
       <div onClick={() => setActive(true)}>

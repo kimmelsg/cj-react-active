@@ -28,9 +28,12 @@ export default class Active extends React.Component {
 
   render() {
     let { active } = this.state
-    let { children } = this.props
+    let { children, className, activeClassName } = this.props
     return (
-      <div ref="component">
+      <div 
+        ref="component"
+        className={className ? `${className}${active ? ` ${activeClassName}` : ''}` : null}
+      >
         {children(active, this.setActive)}
       </div>
     )
