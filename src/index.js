@@ -10,11 +10,11 @@ export default class Active extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('click', this.listenToOuterClick)
+    if(this.props.inactiveOnGlobalClick !== false) window.addEventListener('click', this.listenToOuterClick)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('click', this.listenToOuterClick)
+    if(this.props.inactiveOnGlobalClick !== false) window.removeEventListener('click', this.listenToOuterClick)
   }
 
   listenToOuterClick(e) {
