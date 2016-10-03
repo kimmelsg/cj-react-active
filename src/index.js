@@ -2,9 +2,9 @@ import React from 'react'
 /* globals window */
 
 export default class Active extends React.Component {
-  constructor() {
+  constructor({ active }) {
     super()
-    this.state = {}
+    this.state = { active }
     this.listenToOuterClick = this.listenToOuterClick.bind(this)
     this.setActive = this.setActive.bind(this)
   }
